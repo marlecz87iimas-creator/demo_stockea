@@ -16,7 +16,7 @@ export default function Modal({ open, title, onClose, children, footer, large }:
       <div className={`modal${large ? ' modal-lg' : ''}`} onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h3>{title}</h3>
-          <button className="close-btn" onClick={onClose}>&times;</button>
+          <button type="button" className="close-btn" onClick={onClose}>&times;</button>
         </div>
         <div className="modal-body">{children}</div>
         {footer && <div className="modal-footer">{footer}</div>}
